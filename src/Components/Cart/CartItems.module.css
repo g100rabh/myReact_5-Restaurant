@@ -2,10 +2,26 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #ccc;
+    /* margin: 1rem; */
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid rgb(156, 42, 7);
     width: 90%;
+}
+
+.quantity {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 40%;
+    margin-top: -10%;
+    max-width: auto;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: rgb(214, 214, 203);
+    text-align: center;
+    /* padding: 1%; */
+    padding-left: 5%;
+    margin-right: 40%;
 }
 
 .details {
@@ -15,7 +31,7 @@
 .totalPrice {
     width: 100%;
     text-align: right;
-    margin-top: -5%;
+    margin-top: -3%;
 }
 
 .totalPrice .ta {
@@ -51,6 +67,7 @@
     align-items: center;
     margin-bottom: 0.5rem;
     width: 40%;
+    margin-right: -30%;
   }
   
   .input label {
@@ -66,13 +83,27 @@
     padding-left: 0.5rem;
   }
 
-  .input button {
+  .input .increase {
     font: inherit;
     cursor: pointer;
     background-color: #7c0202;
     border: 1px solid #7c0202;
     color: white;
     padding: 0.15rem 1rem;
-    border-radius: 20px;
+    border-radius: 5px;
     font-weight: bold;
+    margin-left: 5%;
+  }
+
+  .input .reduce {
+    font: inherit;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #7c0202;
+    color: white;
+    padding: 0.15rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #7c0202;
+    margin-left: -18%;
   }

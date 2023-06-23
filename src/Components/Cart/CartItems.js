@@ -11,10 +11,19 @@ const CartItems = () => {
     cartCtx.removeItem(ele.id);
   };
 
-  const quantityChangehandler = (event)=>{
+  const increaseHandler = (event) => {
       const ele = event.target.parentElement.parentElement;
-      cartCtx.quantityChange(ele, event.target.value);
+      cartCtx.quantityChange(ele, +1);
   }
+  const reduceHandler = (event) => {
+    const ele = event.target.parentElement.parentElement;
+    cartCtx.quantityChange(ele, -1);
+}
+
+  const quantityChangehandler = (event) => {
+    const ele = event.target.parentElement.parentElement;
+    cartCtx.quantityChange(ele, event.target.value);
+  };
 
   return (
     <ul className={classes["cart-items"]}>
@@ -23,19 +32,21 @@ const CartItems = () => {
         <li id={item.id} className={classes.meal}>
           <div className={classes.details}>
             <h3>{item.name}</h3>
-            <div className={classes.description}>{item.description}</div>
             <div className={classes.price}>₹{item.price.toFixed(2)}</div>
+            <div className={classes.quantity}>x{item.quantity}</div>
           </div>
+
           <div className={classes.input}>
-            <label>Quantity:</label>
-            <input
+            {/* <label>Quantity:</label> */}
+            {/* <input
               type="number"
               min="1"
               max="5"
               defaultValue={item.quantity}
               onChange={quantityChangehandler}
-            />
-            <button onClick={deleteHandler}>Delete</button>
+            /> */}
+            <button className={classes.reduce} onClick={reduceHandler}>-</button>
+            <button className={classes.increase} onClick={increaseHandler}>+</button>
           </div>
           <div className={classes.totalPrice}>
             <span className={classes.ta}>Total amount: </span>

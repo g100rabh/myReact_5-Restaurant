@@ -7,7 +7,7 @@ const CartProvider = props => {
 
     const addItemHandler = (item) => {
         console.log(item)
-        let existing;
+        // let existing;
         // if(items.length!==0){
         //     items.forEach(i => {
         //         if(i.id === item.id){
@@ -31,7 +31,7 @@ const CartProvider = props => {
         console.log(itemIndex);
         const copy = [...items]
         if(itemIndex !== -1){
-            copy[itemIndex].quantity = `${Number(copy[itemIndex].quantity) + Number(item.quantity)}`;
+            copy[itemIndex].quantity = copy[itemIndex].quantity + item.quantity;
             updateItems(copy)
         } else {
             updateItems([...items, item])
@@ -46,8 +46,11 @@ const CartProvider = props => {
 
     const newQuantityHandler = (ele, newQua) => {
         const itemIndex = items.findIndex(i => i.id === ele.id)
-        const copy = [...items];
-        copy[itemIndex].quantity = newQua;
+        let copy = [...items];
+        copy[itemIndex].quantity = copy[itemIndex].quantity + (newQua);
+        if(copy[itemIndex].quantity == 0){
+            copy = copy.filter((element) => element.id !== ele.id)
+        }
         updateItems(copy)
     }
 
