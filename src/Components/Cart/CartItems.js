@@ -13,7 +13,8 @@ const CartItems = () => {
 
   const quantityChangehandler = (event)=>{
       const ele = event.target.parentElement.parentElement;
-      cartCtx.quantityChange(ele, event.target.value)
+      cartCtx.quantityChange(ele, event.target.value);
+      console.log(ele);
   }
 
   return (
