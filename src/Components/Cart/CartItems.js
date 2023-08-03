@@ -20,11 +20,6 @@ const CartItems = () => {
     cartCtx.quantityChange(ele, -1);
 }
 
-  const quantityChangehandler = (event) => {
-    const ele = event.target.parentElement.parentElement;
-    cartCtx.quantityChange(ele, event.target.value);
-  };
-
   return (
     <ul className={classes["cart-items"]}>
       {cartCtx.items.map((item) => (
@@ -47,6 +42,7 @@ const CartItems = () => {
             /> */}
             <button className={classes.reduce} onClick={reduceHandler}>-</button>
             <button className={classes.increase} onClick={increaseHandler}>+</button>
+            <button className={classes.delete} onClick={deleteHandler}>X</button>
           </div>
           <div className={classes.totalPrice}>
             <span className={classes.ta}>Total amount: </span>

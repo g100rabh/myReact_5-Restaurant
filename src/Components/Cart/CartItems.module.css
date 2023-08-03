@@ -5,10 +5,10 @@
     /* margin: 1rem; */
     padding-bottom: 0.2rem;
     border-bottom: 2px solid rgb(156, 42, 7);
-    width: 90%;
+    width: auto;
 }
 
-.quantity {
+.details .quantity {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -23,6 +23,8 @@
     padding-left: 5%;
     margin-right: 40%;
 }
+
+
 
 .details {
     width: 50%;
@@ -66,7 +68,8 @@
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
-    width: 40%;
+    width: 50%;
+    max-width: auto;
     margin-right: -30%;
   }
   
@@ -106,4 +109,16 @@
     font-weight: bold;
     color: #7c0202;
     margin-left: -18%;
+  }
+
+  .input .delete {
+    font: inherit;
+    cursor: pointer;
+    background-color: rgb(255,0,0);
+    border: 1px solid #7c0202;
+    color: white;
+    padding: 0.15rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 5%;
   }

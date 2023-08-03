@@ -45,68 +45,15 @@
     color: white;
   }
 
-.meal {
+.empty {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #ccc;
-    width: 90%;
-}
-
-.details {
-    width: 50%;
-}
-
-.totalPrice {
-    width: 100%;
-    text-align: right;
-    margin-top: -5%;
-}
-
-.meal h3 {
-    margin: 0 0 0.25rem 0;
-}
-
-.description {
-    font-style: italic;
-}
-
-.price {
-    margin-top: 0.25rem;
-    font-weight: bold;
-    color: #ad5502;
-    font-size: 1.25rem;
-}
-
-.input {
-    display: flex;
+    text-align: center;
     align-items: center;
-    margin-bottom: 0.5rem;
-    width: 40%;
-  }
-  
-  .input label {
-    font-weight: bold;
-    margin-right: 1rem;
-  }
-  
-  .input input {
-    width: 3rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font: inherit;
-    padding-left: 0.5rem;
-  }
-
-  .input button {
-    font: inherit;
-    cursor: pointer;
-    background-color: #7c0202;
-    border: 1px solid #7c0202;
-    color: white;
-    padding: 0.15rem 1rem;
-    border-radius: 20px;
-    font-weight: bold;
-  }
+}
+.empty span {
+    text-align: center;
+    padding-left: 37%;
+    font-style: inherit;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+}
